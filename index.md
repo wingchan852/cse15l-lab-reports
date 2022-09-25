@@ -2,12 +2,16 @@
 
 ## Fall2022 CSE15L
 
+---
+
+To view my week 0 lab report:\
+[Lab Report 1](lab-report-1-week-0.md)\
 Hello World!
 _Hello World!_\
 Link to my school
 [UCSD](https://ucsd.edu/)
 
-> Hello
+> Click [here](hello.md) to learn more about me
 
 ---
 
