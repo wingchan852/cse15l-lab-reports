@@ -4,14 +4,10 @@
 
 ---
 
-<details><summary>To view my lab report</summary>
-<p>
+My lab report
 
 - [Week 0](lab-report-1-week-0.md)
 - [Week 1](lab-report-1-week-1.md)
-
-</p>
-</details>
 
 ---
 
