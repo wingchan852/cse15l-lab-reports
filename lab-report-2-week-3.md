@@ -68,7 +68,7 @@ In this screenshot, I am only calling the handleRequest method. First, this meth
 
 ![image](lab-report-2-images/addString1.png)
 Screenshot1↑ Screenshot2↓
-![image](lab-report-2-images/addSTring2.png)
+![image](lab-report-2-images/addSTring.png)
 
 ### **Searching String/Substring**
 
