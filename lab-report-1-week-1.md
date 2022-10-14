@@ -73,7 +73,7 @@ As you see, mine doesn't work. It is still asking me the password. I guess it is
 
 ### **Optimizing remote running**
 
-Imagining you have a really complex password that consist of letters, numbers, special characters and the length of it is larger than 12 and you need to enter it each time when you login to remote server, that is going to be really timing consuming and probably take you a minute. To make it more efficient, you can implement step 8 which allows you to login without the need of password. Now you can login within 10 seconds!
+Imagining you have a really complex password that consist of letters, numbers, special characters and the length of it is larger than 12 and you need to enter it each time when you login to remote server, that is going to be really timing consuming and probably take you a minute. To make it more efficient, you can implement step 6 which allows you to login without the need of password. Now you can login within 10 seconds!
 
 ---
 
