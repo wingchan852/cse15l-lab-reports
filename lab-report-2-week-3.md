@@ -127,3 +127,8 @@ n.next = new Node(value,bull)
 is going to add a new Node at the end of the linked list forever so it never reaches the null and never end the while loop. In our testing case, when `n = 2`, we assign `n.next` to `9` and back to the while loop condition. Since `n.next` is 9 not `null`, it enters the loop and now `n = n.next` which is `9`. We assign `n.next` again with the value of `9` and so on.\
 After fixed the bug, the code should be:
 ![image](lab-report-2-images/reversedFixedCode.png)
+
+---
+
+That's what we did today in lab.\
+[Return to the main page](index.md)
