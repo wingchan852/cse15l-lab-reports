@@ -39,6 +39,8 @@ class Handler implements URLHandler {
                     }
                 }
                 return String.format("Find Strings: %s", temp.toString().replace("[", "").replace("]", ""));
+            } else if (url.getPath().contains("/show")) {
+                return String.format("Show all String: %s", list.toString().replace("[", "").replace("]", ""));
             }
             return "404 Not Found!";
         }
@@ -71,7 +73,13 @@ In this screenshot, I am only calling the handleRequest method. First, this meth
 
 In this screenshot, I am only calling the heandleRequest method. The values of `url.getPath()` is `/search` and `url.getPath().contains("/search")` is true. `url.getQuery()` is `?s=app`. parameters[0] is `s` and parameters[1] is `app`. The String List `temp` has value `apple` and `application` because both contains `app`. When the request is done, same as above, all those values will stay the same until I have made a new reuqest except `temp` as it is a local variable.
 
-## ![image](lab-report-2-images/searchString.png)
+![image](lab-report-2-images/searchString.png)
+
+### Screenshot4
+
+In this screenshot, I am only calling the heandleRequest method. The values of `url.getPath()` is `/show`. The list has string `"apple"`, `"application"` and `"banana"`. When the request is done, `url.getPath()` will still be `/show` until I change the path to other. Since list is a variable outside the `handleRequest()`, its values won't disapear and it only can be added by using the `/add` path with query.
+
+![image](lab-report-2-images/showString.png)
 
 ## **Part 2**
 
