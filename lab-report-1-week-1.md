@@ -9,7 +9,8 @@ Today is our first lab and we learn how to connect to the remote server, ieng6, 
 1. Go to [here](https://sdacs.ucsd.edu/~icc/index.php) to find your account by using your ucsd username and student ID
 2. Open VScode
    ![image](lab-report-1-week-1-images/vscode.png)
-3. Use the follow code to login into ieng6 and type your password
+3. Use the follow code to login into ieng6 and type your password\
+   **you should change cs15lfa22jb to your own cs15l username**
 
 ```
 ssh cs15lfa22jb@ieng6.ucsd.edu
@@ -67,6 +68,12 @@ scp /Users/wingchan/.ssh/id_rsa CSE15L.pub cs15lfa22jb@ieng6.ucsd.edu:~/.ssh/aut
 Now when you connect to the server, it won't ask you the password again.\
 ![image](lab-report-1-week-1-images/ssh_keys.png)
 As you see, mine doesn't work. It is still asking me the password. I guess it is relate to the name that I have changed because it works in my other class by using the default path.
+
+---
+
+### **Optimizing remote running**
+
+Imagining you have a really complex password that consist of letters, numbers, special characters and the length of it is larger than 12 and you need to enter it each time when you login to remote server, that is going to be really timing consuming and probably take you a minute. To make it more efficient, you can implement step 8 which allows you to login without the need of password. Now you can login within 10 seconds!
 
 ---
 
