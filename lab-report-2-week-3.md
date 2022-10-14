@@ -64,13 +64,9 @@ class SearchEngine {
 
 ### **Adding New String**
 
-In this screenshot, I am only calling the handleRequest method. First, this method will check if there is a path after `/`. In this case, I have add `/add` in my URL so the value of `url.gethPath()` is going to be `/add` and the value of `url.getPath().contains("/add")` is true. Then, `url.getQuery()` is `?s=apple` and `?s=application` for screenshot1 & 2 respectively. `parameters[0]` is going to store the first string, in this case which is `s`, so `parameters[0].equals("s")` will return true and it will add the second string `parameters[1]` to the list. In screenshot1 `parameters[1]` is apple whle in screenshot2 `parameters[1]` is application. When the request is done, all those values will stay the same until I have made a new reuqest. That is because the website is keep running so it keeps listening to my request.
+In this screenshot, I am only calling the handleRequest method. First, this method will check if there is a path after `/`. In this case, I have add `/add` in my URL so the value of `url.gethPath()` is going to be `/add` and the value of `url.getPath().contains("/add")` is true. Then, `url.getQuery()` is `?s=apple`. `parameters[0]` is going to store the first string, in this case which is `s`, so `parameters[0].equals("s")` will return true and it will add the second string `parameters[1]` to the list while `parameters[1]` is apple. When the request is done, all those values will stay the same until I have made a new reuqest. That is because the website is keep running so it keeps listening to my request.
 
 ![image](lab-report-2-images/addString1.png)
-
-Screenshot1↑ Screenshot2↓
-
-![image](lab-report-2-images/addSTring.png)
 
 ### **Searching String/Substring**
 
