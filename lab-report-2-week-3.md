@@ -62,21 +62,21 @@ class SearchEngine {
 }
 ```
 
-### Screenshot 1 & 2
+### **Adding New String**
 
 In this screenshot, I am only calling the handleRequest method. First, this method will check if there is a path after `/`. In this case, I have add `/add` in my URL so the value of `url.gethPath()` is going to be `/add` and the value of `url.getPath().contains("/add")` is true. Then, `url.getQuery()` is `?s=apple` and `?s=application` for screenshot1 & 2 respectively. `parameters[0]` is going to store the first string, in this case which is `s`, so `parameters[0].equals("s")` will return true and it will add the second string `parameters[1]` to the list. In screenshot1 `parameters[1]` is apple whle in screenshot2 `parameters[1]` is application. When the request is done, all those values will stay the same until I have made a new reuqest. That is because the website is keep running so it keeps listening to my request.
 
 ![image](lab-report-2-images/addString1.png)
-
+Screenshot1↑ Screenshot2↓
 ![image](lab-report-2-images/addSTring2.png)
 
-### Screenshot3
+### **Searching String/Substring**
 
 In this screenshot, I am only calling the heandleRequest method. The values of `url.getPath()` is `/search` and `url.getPath().contains("/search")` is true. `url.getQuery()` is `?s=app`. parameters[0] is `s` and parameters[1] is `app`. The String List `temp` has value `apple` and `application` because both contains `app`. When the request is done, same as above, all those values will stay the same until I have made a new reuqest except `temp` as it is a local variable.
 
 ![image](lab-report-2-images/searchString.png)
 
-### Screenshot4
+### Show All String
 
 In this screenshot, I am only calling the heandleRequest method. The values of `url.getPath()` is `/show`. The list has string `"apple"`, `"application"` and `"banana"`. When the request is done, `url.getPath()` will still be `/show` until I change the path to other. Since list is a variable outside the `handleRequest()`, its values won't disapear and it only can be added by using the `/add` path with query.
 
