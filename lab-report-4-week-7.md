@@ -25,10 +25,10 @@ Repeat `dwibase<Esc>n` until you replace all the `start` to `base`.
 
 If I start from the remote server, it took me around 39 second to finish the task and run the bash. If I start from VSCode, it took me around 1 min 15 seconds to finish the task and run the bash.
 
-1. Which of these two styles would you prefer using if you had to work on a program that you were running remotely, and why?
+### **Which of these two styles would you prefer using if you had to work on a program that you were running remotely, and why?**
 
 - I would use vim directly on the remote server beucase it is so convenience and I don't need to copy the file to the remote server after I finish editing. It saves time and work.
 
-2. What about the project or task might factor into your decision one way or another? (If nothing would affect your decision, say so and why!)
+### **What about the project or task might factor into your decision one way or another? (If nothing would affect your decision, say so and why!)**
 
 - I would still prefer using VSCode over Vim because I found it is hard to debug in the terminal window. It much more easier to debug using IDE.
