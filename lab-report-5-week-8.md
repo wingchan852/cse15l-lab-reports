@@ -53,59 +53,17 @@ fi
 
 Using #2 as an example:
 
-## **Step 1**:
-
-Clone the repository `https://github.com/ucsd-cse15l-f22/list-methods-corrected`
-
-## **Step 2**:
-
-Check if the folder `student-submission` exists. In this case, it returns `true` and print the message `"correct file submitted"`.
-
-## **Step 3**:
-
-copy `TestListExamples.java` and `lib`(contain JUnit files) into `student-submission` folder. Then we `set +e` to allow error happen.
-
-## **Step 4**:
-
-Get into the `student-submission` folder and compile & run the JUnit
-
-```
-CPATH=".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar"
-```
-
-and
-
-```
-javac -cp $CPATH *.java
-java -cp $CPATH org.junit.runner.JUnitCore TestListExamples 1> stdout
-```
-
-Redirect the stdoutput to the file called `stdout`
-
-## **Step 5**:
-
-Run the following commands:
-
-```
-CHECK=$(grep -o "Failures" stdout)
-```
-
-Search the word `"Failures"` if it exist in file `stdout`. In this case, it will return `false` so `CHECK = false`
-
-```
-PASS=$(grep -E -o ".{0,2}test.{0,0}" stdout)
-```
-
-Search the word `"test"` in file `stdout` and store its two previous characters + itself in `PASS`. It counts the numbers of passing test. In this case, `PASS = 4 test`
-
-```
-FAILURE=$(grep -E -o "Failures.{0,3}" stdout)
-```
-
-Search the word `"Failures"` in file stdout and store 2 character after `"Failures"` + itself in `FAILURE`. It counts the numbers of failing test. In this case, `FAILURE = false` because it passes all the tests so `"Failures"` does not exist in `stdout`.
-
-## **Step 6**:
-
-Use `CHECK` to check if the function whether pass all tests or not. In this case, `CHECK` is `false` so it goes to the `else statement`. It then prints out `"Total: 4 tests"` and `"You pass: $PASS"` where `PASS = 4`
+| Command                                                       | stdout                                             | stderr | exit code | if statement | explanation                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------- | -------------------------------------------------- | ------ | --------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `rm -rf student-submission`                                   | empty                                              | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `git clone $1 student-submission`                             | empty                                              | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `if [[ -f "./student-submission/ListExamples.java" ]]`        | empty                                              | empty  | 0         | True         | ListExamples.java file can be found in student-submission folder. Therefore, it run if statement `echo "correct file submitted"` but won't run else statement `echo "missing file"`                                                                                                                                                              |
+| `cp TestListExamples.java ./student-submission/`              | empty                                              | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `cp -r lib ./student-submission/`                             | empty                                              | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `cd student-submission`                                       | empty                                              | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `javac -cp $CPATH *.java`                                     | empty                                              | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `java -cp $CPATH org.junit.runner.JUnitCore TestListExamples` | `JUnit version 4.13.2....Time: 0.009 OK (4 tests)` | empty  | 0         | N/A          | N/A                                                                                                                                                                                                                                                                                                                                              |
+| `if [[ $CHECK ]]`                                             | empty                                              | empty  | 0         | False        | `$CHECK` is going to search the word `"Failures"` if it exist in file `stdout`. In this case, since it pass all the tests, the word `"Failures"` is not existed in stdout. Therefore, it will run else statement `echo "Total: 4 tests"` and `echo "You pass: $PASS"` and skip if statement `echo "Total: 4 tests"` and `grep "Failures" stdout` |
+| `if [[ $? -eq 0 ]]`                                           | empty                                              | empty  | 0         | True         | Since there's no error, it will run if statement `exit` and skip else statement `echo "test filed!"`                                                                                                                                                                                                                                             |
 
 [Return to the main page](index.md)
